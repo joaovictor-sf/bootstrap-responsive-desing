@@ -17,6 +17,13 @@
         - [Alinhamento Responsivo](#alinhamento-responsivo)
         - [Display](#display)
     - [Cores](#cores)
+    - [Elementos Flutuantes](#elementos-flutuantes)
+    - [Posicionamento](#posicionamento)
+    - [Margin e Padding](#margin-e-padding)
+    - [Tamanho](#tamanho)
+    - [Bordas](#bordas)
+        - [Estilos de borda](#estilos-de-borda)
+        - [Arredondamento de borda](#arredondamento-de-borda)
 
 # Bootstrap
 Bootstrap é um framework front-end que facilita a criação de sites responsivos e mobile-first. Ele é composto por um conjunto de classes CSS e, em alguns casos, JavaScript, que definem a aparência e o comportamento de diversos elementos HTML.
@@ -174,3 +181,238 @@ Exemplo:
 <p class="bg-primary">Background com a cor primária</p>
 ```
 
+Também é possível alterar o tom(opacidade) da cor. Para isso basta adicionar o sufixo -{value} ao nome da cor. Os valores que podem ser usados são:
+
+- 50: define o tom 50 da cor
+- 100: define o tom 100 da cor
+- 200: define o tom 200 da cor
+
+Exemplo:
+```html
+<p class="text-primary-50">Texto com o tom 50 da cor primária</p>
+<p class="bg-primary-100">Background com o tom 100 da cor primária</p>
+```
+
+## Elementos Flutuantes
+O Bootstrap possui classes para alinhar elementos HTML. São elas:
+
+- float-{value}: define o alinhamento do elemento HTML
+- float-{breakpoint}-{value}: define o alinhamento do elemento HTML para um breakpoint específico
+
+Os valores que podem ser usados são:
+
+- start: alinha o elemento HTML a esquerda
+- end: alinha o elemento HTML a direita
+- none: não alinha o elemento HTML
+
+O Bootstrap também possui classes para limpar o alinhamento de elementos HTML. São elas:
+
+- clearfix: limpa o alinhamento de elementos HTML
+- clearfix-{breakpoint}: limpa o alinhamento de elementos HTML para um breakpoint específico
+
+Exemplo:
+```html
+<div class="clearfix">
+    <div class="float-start">Alinha o elemento a esquerda</div>
+    <div class="float-end">Alinha o elemento a direita</div>
+    <div class="float-none">Não alinha o elemento</div>
+</div>
+```
+
+## Posicionamento
+O Bootstrap possui classes para posicionar elementos HTML. São elas:
+
+- position-static: posiciona o elemento HTML de forma estática
+- position-relative: posiciona o elemento HTML de forma relativa
+- position-absolute: posiciona o elemento HTML de forma absoluta
+- position-fixed: posiciona o elemento HTML de forma fixa
+- position-sticky: posiciona o elemento HTML de forma sticky
+
+O Bootstrap também possui classes para posicionar elementos HTML em relação a um breakpoint específico. São elas:
+
+- position-{breakpoint}-static: posiciona o elemento HTML de forma estática para um breakpoint específico
+- position-{breakpoint}-relative: posiciona o elemento HTML de forma relativa para um breakpoint específico
+- position-{breakpoint}-absolute: posiciona o elemento HTML de forma absoluta para um breakpoint específico
+- position-{breakpoint}-fixed: posiciona o elemento HTML de forma fixa para um breakpoint específico
+- position-{breakpoint}-sticky: posiciona o elemento HTML de forma sticky para um breakpoint específico
+
+Exemplo:
+```html
+<div class="position-static">Posiciona o elemento de forma estática</div>
+<div class="position-relative">Posiciona o elemento de forma relativa</div>
+<div class="position-absolute">Posiciona o elemento de forma absoluta</div>
+<div class="position-fixed">Posiciona o elemento de forma fixa</div>
+<div class="position-sticky">Posiciona o elemento de forma sticky</div>
+```
+
+## Margin e Padding
+O Bootstrap possui classes para definir a margem e o padding de um elemento HTML. São elas:
+
+- m-{value}: define a margem de um elemento HTML
+- p-{value}: define o padding de um elemento HTML
+
+Ultilizar apenas m ou p irá definir a margem ou o padding para todos os lados. Para definir a margem ou o padding para um lado específico, basta adicionar o sufixo -{side} ao nome da classe. Os lados que podem ser usados são:
+
+- t: define a margem ou o padding para o topo
+- b: define a margem ou o padding para a base
+- s: define a margem ou o padding para os lados
+- e: define a margem ou o padding para a esquerda
+- x: define a margem ou o padding para os lados
+- y: define a margem ou o padding para o topo e a base
+
+Exemplo:
+```html
+<div class="mt-2">Define a margem como 0.5rem</div>
+<div class="pb-3">Define o padding como 1rem</div>
+<div class="px-4">Define a margem ou o padding como 1.5rem</div>
+```
+
+Os valores que podem ser usados são:
+
+- 0: define a margem ou o padding como 0
+- 1: define a margem ou o padding como 0.25rem
+- 2: define a margem ou o padding como 0.5rem
+- 3: define a margem ou o padding como 1rem
+- 4: define a margem ou o padding como 1.5rem
+- 5: define a margem ou o padding como 3rem
+- auto: define a margem ou o padding como auto
+
+Exemplo:
+```html
+<div class="m-0">Define a margem como 0</div>
+<div class="p-1">Define o padding como 0.25rem</div>
+```
+
+O Bootstrap também possui classes para definir a margem e o padding de um elemento HTML em relação a um breakpoint específico. São elas:
+
+- m-{breakpoint}-{value}: define a margem de um elemento HTML para um breakpoint específico
+- p-{breakpoint}-{value}: define o padding de um elemento HTML para um breakpoint específico
+
+Exemplo:
+```html
+<div class="m-sm-0">Define a margem como 0 para telas pequenas</div>
+<div class="p-md-1">Define o padding como 0.25rem para telas médias</div>
+```
+
+## Tamanho
+O Bootstrap possui classes para definir o tamanho de um elemento HTML. São elas:
+
+- w-{value}: define a largura de um elemento HTML
+- h-{value}: define a altura de um elemento HTML
+
+Os valores que podem ser usados são:
+
+- 25: define a largura ou a altura como 25%
+- 50: define a largura ou a altura como 50%
+- 75: define a largura ou a altura como 75%
+- 100: define a largura ou a altura como 100%
+- auto: define a largura ou a altura como auto
+
+Exemplo:
+```html
+<div class="w-25">Define a largura como 25%</div>
+<div class="h-50">Define a altura como 50%</div>
+```
+
+O Bootstrap também possui classes para definir o tamanho de um elemento HTML em relação a um breakpoint específico. São elas:
+
+- w-{breakpoint}-{value}: define a largura de um elemento HTML para um breakpoint específico
+- h-{breakpoint}-{value}: define a altura de um elemento HTML para um breakpoint específico
+
+## Bordas
+O Bootstrap possui classes para definir a borda de um elemento HTML. São elas:
+
+- border: define a borda de um elemento HTML
+- border-{side}: define a borda de um elemento HTML para um lado específico
+- border-{side}-{breakpoint}: define a borda de um elemento HTML para um lado específico e um breakpoint específico
+
+Os lados que podem ser usados são:
+
+- top: define a borda para o topo
+- bottom: define a borda para a base
+- start: define a borda para a esquerda
+- end: define a borda para a direita
+
+Exemplo:
+```html
+<div class="border">Define a borda para todos os lados</div>
+<div class="border-top">Define a borda para o topo</div>
+<div class="border-bottom">Define a borda para a base</div>
+<div class="border-start">Define a borda para a esquerda</div>
+<div class="border-end">Define a borda para a direita</div>
+```
+
+O Bootstrap também possui classes para definir a cor da borda de um elemento HTML. São elas:
+
+- border-{color}: define a cor da borda de um elemento HTML
+- border-{color}-{side}: define a cor da borda de um elemento HTML para um lado específico
+- border-{color}-{side}-{breakpoint}: define a cor da borda de um elemento HTML para um lado específico e um breakpoint específico
+
+Os valores que podem ser usadadas são as classes de cores do Bootstrap.
+
+Exemplo:
+```html
+<div class="border-primary">Define a cor da borda como primária</div>
+<div class="border-top-secondary">Define a cor da borda para o topo como secundária</div>
+```
+
+O Bootstrap também possui classes para definir o estilo da borda de um elemento HTML. São elas:
+
+- border-{style}: define o estilo da borda de um elemento HTML
+- border-{style}-{side}: define o estilo da borda de um elemento HTML para um lado específico
+- border-{style}-{side}-{breakpoint}: define o estilo da borda de um elemento HTML para um lado específico e um breakpoint específico
+
+### Estilos de borda
+
+Os valores que podem ser usados são:
+
+- solid: define o estilo da borda como sólido
+- dashed: define o estilo da borda como tracejado
+- dotted: define o estilo da borda como pontilhado
+- double: define o estilo da borda como duplo
+- none: define o estilo da borda como nenhum
+
+Exemplo:
+```html
+<div class="border-solid">Define o estilo da borda como sólido</div>
+<div class="border-top-dashed">Define o estilo da borda para o topo como tracejado</div>
+```
+
+O Bootstrap também possui classes para definir a largura da borda de um elemento HTML. São elas:
+
+- border-{width}: define a largura da borda de um elemento HTML
+- border-{width}-{side}: define a largura da borda de um elemento HTML para um lado específico
+- border-{width}-{side}-{breakpoint}: define a largura da borda de um elemento HTML para um lado específico e um breakpoint específico
+
+Os valores que podem são as classes de tamanho do Bootstrap.
+
+Exemplo:
+```html
+<div class="border-1">Define a largura da borda como 0.25rem</div>
+<div class="border-top-2">Define a largura da borda para o topo como 0.5rem</div>
+```
+
+### Arredondamento de borda
+
+No Bootstrap, também é possível definir o raio(arredondamento) da borda de um elemento HTML. Para isso, basta adicionar a classe .rounded. Os valores que podem ser usados são:
+
+- rounded: define o raio da borda como 0.25rem
+- rounded-{value}: define o raio da borda como um valor específico
+- rounded-{side}-{value}: define o raio da borda para um lado específico como um valor específico
+- rounded-{side}-{breakpoint}-{value}: define o raio da borda para um lado específico como um valor específico e um breakpoint específico
+
+Os tipos de arrredondamento que podem ser usados são:
+
+- top: define o raio da borda para o topo
+- bottom: define o raio da borda para a base
+- start: define o raio da borda para a esquerda
+- end: define o raio da borda para a direita
+- circle: define o raio da borda como um círculo
+- pill: define o raio da borda como uma pílula
+
+Exemplo:
+```html
+<div class="rounded">Define o raio da borda como 0.25rem</div>
+<div class="rounded-1">Define o raio da borda como 0.5rem</div>
+<div class="rounded-top-2">Define o raio da borda para o topo como 1rem</div>
+```
