@@ -416,3 +416,152 @@ Exemplo:
 <div class="rounded-1">Define o raio da borda como 0.5rem</div>
 <div class="rounded-top-2">Define o raio da borda para o topo como 1rem</div>
 ```
+
+## Botões
+O Bootstrap possui classes para estilizar botões. São elas:
+
+- btn: define o estilo do botão
+- btn-{color}: define a cor do botão
+- btn-{size}: define o tamanho do botão
+- btn-{outline}: define o botão como outline(transparente com borda)
+- btn-{block}: define o botão como block
+
+Pode ultilizar as classes do bootstrap para definir a cor e o tamanho do botão.
+
+Exemplo:
+```html
+<button class="btn btn-primary">Botão primário</button>
+<button class="btn btn-secondary">Botão secundário</button>
+<button class="btn btn-success">Botão de sucesso</button>
+<button class="btn btn-danger">Botão de perigo</button>
+<button class="btn btn-warning">Botão de aviso</button>
+<button class="btn btn-info">Botão de informação</button>
+<button class="btn btn-light">Botão claro</button>
+<button class="btn btn-dark">Botão escuro</button>
+<button class="btn btn-white">Botão branco</button>
+<button class="btn btn-transparent">Botão transparente</button>
+```
+
+Exemplo:
+```html
+<button class="btn btn-sm">Botão pequeno</button>
+<button class="btn btn-md">Botão médio</button>
+<button class="btn btn-lg">Botão grande</button>
+```
+
+É possivel definir o botão como active, disabled ou focus. Para isso basta adicionar a classe .active, .disabled ou .focus.
+Active: deixa o botão com a cor primaria. Pode ser ultilizado para indicar qual aba está selecionada.
+Disabled: deixa o botão desabilitado. Pode ser ultilizado para indicar que o botão não pode ser clicado.
+Focus: deixa o botão com uma borda azul. Pode ser ultilizado para indicar que o botão está selecionado.
+
+Exemplo:
+```html
+<button class="btn btn-primary active">Botão primário</button>
+<button class="btn btn-primary disabled">Botão primário</button>
+<button class="btn btn-primary focus">Botão primário</button>
+```
+
+Tambem é possivel ultilizar o data-bs-toggle="button" para criar um botão que alterna entre ativo e inativo.
+
+### Grupos de botões
+Ultizando a classe .btn-group é possivel agrupar botões.
+
+Exemplo:
+```html
+<div class="btn-group">
+    <button class="btn btn-primary">Botão primário</button>
+    <button class="btn btn-primary">Botão primário</button>
+    <button class="btn btn-primary">Botão primário</button>
+</div>
+```
+
+Tambem é possivel agrupar botões verticalmente. Para isso basta adicionar a classe .btn-group-vertical.
+
+Exemplo:
+```html
+<div class="btn-group-vertical">
+    <button class="btn btn-primary">Botão primário</button>
+    <button class="btn btn-primary">Botão primário</button>
+    <button class="btn btn-primary">Botão primário</button>
+</div>
+```
+
+Outra forma de agrupar botões é utilizando a classe .btn-toolbar. Ela agrupa os botões horizontalmente e adiciona uma margem entre eles.
+
+Exemplo:
+```html
+<div class="btn-toolbar">
+    <div class="btn-group me-2">
+        <button class="btn btn-primary">Botão primário</button>
+        <button class="btn btn-primary">Botão primário</button>
+        <button class="btn btn-primary">Botão primário</button>
+    </div>
+    <div class="btn-group me-2">
+        <button class="btn btn-primary">Botão primário</button>
+        <button class="btn btn-primary">Botão primário</button>
+        <button class="btn btn-primary">Botão primário</button>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-primary">Botão primário</button>
+        <button class="btn btn-primary">Botão primário</button>
+        <button class="btn btn-primary">Botão primário</button>
+    </div>
+</div>
+```
+
+Tambem é possivel criar um grupo de botões com dropdown. Para isso basta adicionar a classe .btn-group e a classe .dropdown-toggle.
+
+Exemplo:
+```html
+<div class="btn-group">
+    <button class="btn btn-primary">Botão primário</button>
+    <button class="btn btn-primary">Botão primário</button>
+    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"></button>
+    <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">Item 1</a></li>
+        <li><a href="#" class="dropdown-item">Item 2</a></li>
+        <li><a href="#" class="dropdown-item">Item 3</a></li>
+    </ul>
+</div>
+``` 
+
+Tambem é possivel criar grupos de botões com radio ou checkbox. Para isso basta adicionar a classe .btn-group e a classe .btn-check.
+
+Exemplo:
+```html
+<div class="btn-group">
+    <input type="radio" name="btn-radio" id="btn-radio-1" class="btn-check">
+    <label for="btn-radio-1" class="btn btn-primary">Botão primário</label>
+    <input type="radio" name="btn-radio" id="btn-radio-2" class="btn-check">
+    <label for="btn-radio-2" class="btn btn-primary">Botão primário</label>
+    <input type="radio" name="btn-radio" id="btn-radio-3" class="btn-check">
+    <label for="btn-radio-3" class="btn btn-primary">Botão primário</label>
+</div>
+```
+
+## Navegação
+O Bootstrap possui classes para estilizar a navegação. São elas:
+
+- nav: define o estilo da navegação
+- nav-{type}: define o tipo da navegação
+- nav-{type}-{color}: define a cor da navegação
+- nav-{type}-{size}: define o tamanho da navegação
+- nav-{type}-{fill}: define a navegação como fill(ocupando todo o espaço disponível)
+- nav-{type}-{justify}: define a navegação como justify(distribuindo os itens igualmente)
+- nav-{type}-{orientation}: define a orientação da navegação
+- nav-{type}-{variant}: define a variante da navegação
+
+Os tipos que podem ser usados são:
+
+- nav: define o tipo da navegação como tabs
+- nav-pills: define o tipo da navegação como pills
+- nav-tabs: define o tipo da navegação como tabs
+
+Exemplo:
+```html
+<ul class="nav nav-pills">
+    <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+</ul>
+```
