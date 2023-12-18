@@ -24,6 +24,20 @@
     - [Bordas](#bordas)
         - [Estilos de borda](#estilos-de-borda)
         - [Arredondamento de borda](#arredondamento-de-borda)
+    - [Botões](#botões)
+        - [Cores disponiveis](#cores-disponiveis)
+        - [Tamanhos disponiveis](#tamanhos-disponiveis)
+        - [Estados disponiveis](#estados-disponiveis)
+        - [Grupos de botões](#grupos-de-botões)
+            - [Botões com dropdown](#botões-com-dropdown)
+            - [Botões com radio ou checkbox](#botões-com-radio-ou-checkbox)
+    - [Navegação](#navegação)
+        - [Alinhamento](#alinhamento-1)
+        - [Orientação](#orientação)
+        - [Variante](#variante)
+        - [Fill e Justify](#fill-e-justify)
+    - [Barra de navegação](#barra-de-navegação)
+        - [Conteudo](#conteudo)
 
 # Bootstrap
 Bootstrap é um framework front-end que facilita a criação de sites responsivos e mobile-first. Ele é composto por um conjunto de classes CSS e, em alguns casos, JavaScript, que definem a aparência e o comportamento de diversos elementos HTML.
@@ -426,6 +440,7 @@ O Bootstrap possui classes para estilizar botões. São elas:
 - btn-{outline}: define o botão como outline(transparente com borda)
 - btn-{block}: define o botão como block
 
+### Cores disponiveis
 Pode ultilizar as classes do bootstrap para definir a cor e o tamanho do botão.
 
 Exemplo:
@@ -442,6 +457,7 @@ Exemplo:
 <button class="btn btn-transparent">Botão transparente</button>
 ```
 
+### Tamanhos disponiveis
 Exemplo:
 ```html
 <button class="btn btn-sm">Botão pequeno</button>
@@ -449,6 +465,7 @@ Exemplo:
 <button class="btn btn-lg">Botão grande</button>
 ```
 
+### Estados disponiveis
 É possivel definir o botão como active, disabled ou focus. Para isso basta adicionar a classe .active, .disabled ou .focus.
 Active: deixa o botão com a cor primaria. Pode ser ultilizado para indicar qual aba está selecionada.
 Disabled: deixa o botão desabilitado. Pode ser ultilizado para indicar que o botão não pode ser clicado.
@@ -509,6 +526,7 @@ Exemplo:
 </div>
 ```
 
+#### Botões com dropdown
 Tambem é possivel criar um grupo de botões com dropdown. Para isso basta adicionar a classe .btn-group e a classe .dropdown-toggle.
 
 Exemplo:
@@ -525,6 +543,7 @@ Exemplo:
 </div>
 ``` 
 
+#### Botões com radio ou checkbox
 Tambem é possivel criar grupos de botões com radio ou checkbox. Para isso basta adicionar a classe .btn-group e a classe .btn-check.
 
 Exemplo:
@@ -556,6 +575,7 @@ Os tipos que podem ser usados são:
 - nav: define o tipo da navegação como tabs
 - nav-pills: define o tipo da navegação como pills
 - nav-tabs: define o tipo da navegação como tabs
+- nav-underlines: define o tipo da navegação como underlines
 
 Exemplo:
 ```html
@@ -565,3 +585,247 @@ Exemplo:
     <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
 </ul>
 ```
+
+As cores que podem ser usadas são as classes de cores do Bootstrap.
+
+### Alinhamento
+Para alinhar a navegação, basta adicionar a classe .justify-content-{value}. Os valores que podem ser usados são:
+
+- start: alinha a navegação a esquerda
+- center: alinha a navegação ao centro
+- end: alinha a navegação a direita
+- around: distribui os itens igualmente com espaços iguais entre eles
+- between: distribui os itens igualmente com espaços maiores entre eles
+- evenly: distribui os itens igualmente com espaços iguais entre eles
+
+Exemplo:
+```html
+<ul class="nav nav-pills justify-content-start">
+    <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+</ul>
+```
+
+### Orientação
+Para definir a orientação da navegação, basta adicionar a classe .flex-{value}. Os valores que podem ser usados são:
+
+- row: define a orientação da navegação como horizontal
+- column: define a orientação da navegação como vertical
+
+Exemplo:
+```html
+<ul class="nav nav-pills flex-row">
+    <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+</ul>
+```
+
+### Variante
+Para definir a variante da navegação, basta adicionar a classe .nav-{variant}. Os valores que podem ser usados são:
+
+- nav-{variant}: define a variante da navegação como default
+- nav-{variant}-light: define a variante da navegação como light
+- nav-{variant}-dark: define a variante da navegação como dark
+
+Exemplo:
+```html
+<ul class="nav nav-pills nav-light">
+    <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+</ul>
+```
+
+As variantes servem para definir a cor do texto e do background da navegação.
+
+### Fill e Justify
+Para definir a navegação como fill ou justify, basta adicionar a classe .nav-{fill} ou .nav-{justify}.
+
+Exemplo:
+```html
+<ul class="nav nav-tabs nav-fill">
+    <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+</ul>
+```
+
+Fill faz com que os itens da navegação ocupem todo o espaço disponível. Justify faz com que os itens da navegação sejam distribuídos igualmente.
+
+## Barra de navegação
+Para criar uma barra de navegação, basta adicionar a classe .navbar. Para definir a cor da barra de navegação, basta adicionar a classe .navbar-{color}. As cores que podem ser usadas são as classes de cores do Bootstrap.
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary"></nav>
+```
+
+### Conteudo
+Navbar podem conter links, textos e formulários. Algumas classes podem ser usadas para estilizar esses elementos. São elas:
+
+- navbar-brand: define o estilo do link da marca
+- navbar-text: define o estilo do texto
+- navbar-toggler: define o estilo do botão de toggle
+- collapse.navbar-collapse: define o estilo do conteúdo que será escondido
+- navbar-scroll: define o estilo da barra de rolagem
+
+Exemplo:
+```html
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+```
+
+### Posicionamento
+Navbar podem ser posicionadas de 3 formas: fixed-top, fixed-bottom e sticky-top. Para isso, basta adicionar a classe .fixed-top, .fixed-bottom ou .sticky-top.
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary fixed-top"></nav>
+```
+
+### Scrolling
+Navbar podem ser fixadas ou escondidas quando o usuário rolar a página. Para isso, basta adicionar a classe .navbar-scroll. Para definir o comportamento da barra de rolagem, basta adicionar a classe .navbar-scroll-{value}. Os valores que podem ser usados são:
+
+- auto: define o comportamento da barra de rolagem como auto
+- touch: define o comportamento da barra de rolagem como touch(oculta quando o usuário rolar a página)
+- scroll: define o comportamento da barra de rolagem como scroll
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary navbar-scroll navbar-scroll-touch"></nav>
+```
+
+### Toggler
+Navbar podem ser colapsadas em telas pequenas. Para isso, basta adicionar a classe .navbar-toggler. Para definir o comportamento do toggler, basta adicionar a classe .navbar-toggler-{value}. Os valores que podem ser usados são:
+
+- expand: define o comportamento do toggler como expand
+- collapse: define o comportamento do toggler como collapse
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary navbar-toggler navbar-toggler-expand"></nav>
+```
+
+Icones podem ser adicionados ao toggler. Para isso, basta adicionar a classe .navbar-toggler-icon.
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary navbar-toggler navbar-toggler-expand">
+    <button class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+```
+
+### Dropdown
+Navbar podem conter dropdowns. Para isso, basta adicionar a classe .dropdown-menu ao elemento que será o dropdown. Para definir o comportamento do dropdown, basta adicionar a classe .dropdown-menu-{value}. Os valores que podem ser usados são:
+
+- start: define o comportamento do dropdown como start
+- end: define o comportamento do dropdown como end
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary">
+    <div class="dropdown-menu dropdown-menu-start">
+        <a href="#" class="dropdown-item">Item 1</a>
+        <a href="#" class="dropdown-item">Item 2</a>
+        <a href="#" class="dropdown-item">Item 3</a>
+    </div>
+</nav>
+```
+
+### Formulários
+Navbar podem conter formulários. Para isso, basta adicionar a classe .navbar-form ao elemento que será o formulário.
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary">
+    <form class="navbar-form">
+        <input type="text" class="form-control">
+        <button class="btn btn-primary">Enviar</button>
+    </form>
+</nav>
+```
+
+### Textos
+Navbar podem conter textos. Para isso, basta adicionar a classe .navbar-text ao elemento que será o texto.
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary">
+    <span class="navbar-text">Texto</span>
+</nav>
+```
+
+### Offcanvas
+Um offcanvas é um menu que aparece quando o usuário clica em um botão. Esse menu pode ser posicionado a esquerda ou a direita da página. Para criar um offcanvas, basta adicionar a classe .offcanvas. Para definir o posicionamento do offcanvas, basta adicionar a classe .offcanvas-{side}. Os lados que podem ser usados são:
+
+- start: define o posicionamento do offcanvas a esquerda
+- end: define o posicionamento do offcanvas a direita
+
+Exemplo:
+```html
+<nav class="navbar navbar-primary">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-start">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Offcanvas</h5>
+            <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Link 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+```
+
+Quando o usuário clicar no botão, o offcanvas será exibido. Para definir o comportamento do offcanvas, basta adicionar a classe .offcanvas-{value}. Os valores que podem ser usados são:
+
+- show: define o comportamento do offcanvas como show
+- hide: define o comportamento do offcanvas como hide
+
+Quando se usa o offcanvas, é necessário adicionar o atributo data-bs-toggle="offcanvas" e o atributo data-bs-target="#{id}" ao botão que irá abrir o offcanvas. O atributo data-bs-target="#{id}" deve ter o mesmo valor do atributo id do offcanvas.
+
+Se usado em uma navbar dark, você pode precisar adicionar a classes como: text-bg-dark, dropdown-menu-dark e bg-dark.
