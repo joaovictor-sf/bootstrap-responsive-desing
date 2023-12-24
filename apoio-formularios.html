@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <title>Bootstrap - formulários</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+  </head>
+
+  <body style="margin-bottom: 200px;padding: 16px;">
+
+    
+    <!-- formulários 
+        classe: form-control-<opcoes>
+        opções: sm, lg
+    -->
+    <form>
+        
+        <!-- caixas de texto -->
+        <div class="">
+            <label for="usuario">Usuário</label>
+            <input class="form-control" type="text" id="usuario" placeholder="Digite seu usuário">
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input class="form-control" type="email" id="email" placeholder="Digite seu email" readonly>
+            <small>Email será validado</small>
+        </div>
+
+        <!-- select -->
+        <div>
+            <label for="estados">Estados</label>
+            <select class="form-control" id="estados">
+                <option>Acre</option>
+                <option>Alagoas</option>
+                <option>Amapá</option>
+                <option>...</option>
+            </select>
+        </div>
+
+        <!-- textarea -->
+        <div>
+            <label for="mensagem">Mensagem</label>
+            <textarea class="form-control" id="mensagem" rows="3"></textarea>
+        </div>
+
+        <!-- file input -->
+        <div>
+            <label for="arquivo">Arquivo</label>
+            <input class="form-control" type="file" id="arquivo">
+        </div>
+
+
+        <!-- custom file input -->
+        <div>
+            <input type="file" id="arquivo">
+            <label>Selecione arquivo</label>
+        </div>
+        <br><br>
+
+        <!-- range -->
+        <div>
+            <label id="range">Satisfação</label>
+            <input class="form-range" type="range" 
+            id="range" min="1" max="5">
+
+            <label id="range">Satisfação com step</label>
+            <input class="form-range" type="range" 
+            id="range" min="1" max="5" step="0.5">
+        </div>
+
+        <!-- button -->
+        <input class="btn btn-primary" type="submit" value="Salvar">
+
+    </form>
+    <br><br>
+
+    <!-- Formulário inline -->
+    <form class="input-group">
+        <input class="form-control" type="text" placeholder="Digite seu usuário">
+        <input class="form-control" type="password" placeholder="Digite sua senha">
+        <input class="btn btn-primary" type="submit" value="Logar">
+    </form>
+    <br><br>
+
+    <!-- 
+    Validação de formulário 
+    Classes: is-valid, is-invalid, invalid-feedback, valid-feedback
+    -->
+    <form>
+        
+        <div>
+            <label for="email-usuario">email</label>
+            <input type="text" id="email-usuario" placeholder="Digite seu e-mail">
+        </div>
+
+        <div>
+            <label for="senha-usuario">Senha</label>
+            <input type="email" id="senha-usuario" placeholder="Digite sua senha">
+            <div>
+                Senha inválida
+            </div>
+        </div>
+
+        <input type="submit" value="Logar">
+
+    </form>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  </body>
+</html>

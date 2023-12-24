@@ -829,3 +829,173 @@ Quando o usuário clicar no botão, o offcanvas será exibido. Para definir o co
 Quando se usa o offcanvas, é necessário adicionar o atributo data-bs-toggle="offcanvas" e o atributo data-bs-target="#{id}" ao botão que irá abrir o offcanvas. O atributo data-bs-target="#{id}" deve ter o mesmo valor do atributo id do offcanvas.
 
 Se usado em uma navbar dark, você pode precisar adicionar a classes como: text-bg-dark, dropdown-menu-dark e bg-dark.
+
+## Formulários
+
+### Formulários básicos
+As duas classes mais básicas para estilizar formulários são .form-control e .form-label. A classe .form-control estiliza os inputs e a classe .form-label estiliza as labels.
+
+A classe .form-control tambem pode ser usada para estilizar selects, textareas e inputs com o atributo type="file".
+
+Exemplo:
+```html
+<form>
+    <div class="mb-3">
+        <label for="input-1" class="form-label">Input 1</label>
+        <input type="text" id="input-1" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="input-2" class="form-label">Input 2</label>
+        <input type="text" id="input-2" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="input-3" class="form-label">Input 3</label>
+        <input type="text" id="input-3" class="form-control">
+    </div>
+</form>
+```
+
+É possivel colocar o label flutuando sobre o input.
+
+Exemplo:
+```html
+<form>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+    </div>
+</form>
+```
+
+Se voce quiser adicionar um texto de ajuda, basta adicionar a classe .form-text ao elemento que será o texto de ajuda.
+
+Exemplo:
+```html
+<form>
+    <div class="mb-3">
+        <label for="input-1" class="form-label">Input 1</label>
+        <input type="text" id="input-1" class="form-control">
+        <span class="form-text">Texto de ajuda</span>
+    </div>
+</form>
+```
+
+### Select
+Para estilizar um select, basta adicionar a classe .form-select.
+
+Exemplo:
+```html
+<form>
+    <label for="subject" class="form-label">Subject</label>
+    <select name="subject" id="subject" class="form-select">
+        <option value="pricing">Pricing</option>
+        <option value="technical" selected>Technical</option>
+        <option value="other">Other</option>
+    </select>
+</form>
+```
+
+Usando multiple, o select se torna um select de múltipla escolha e com o size você pode definir quantas opções serão exibidas ao mesmo tempo.
+
+
+### Range
+Para estilizar um range, basta adicionar a classe .form-range.
+
+Exemplo:
+```html
+<form>
+    <label for="range" class="form-label">Range</label>
+    <input type="range" id="range" class="form-range">
+</form>
+```
+
+### Tamanho
+Para definir o tamanho de um input, basta adicionar a classe .form-control-{size}. Os tamanhos que podem ser usados são:
+
+- sm: define o tamanho do input como small
+- md: define o tamanho do input como medium
+- lg: define o tamanho do input como large
+
+Exemplo:
+```html
+<form>
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+    <input class="form-control" type="text" placeholder="Default input">
+    <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+</form>
+```
+
+### Checkboxes e Radios
+Se ultiliza de 3 classes para estilizar checkboxes e radios. São elas:
+
+- .form-check: estiliza o container do checkbox ou radio
+- .form-check-input: estiliza o input do checkbox ou radio
+- .form-check-label: estiliza o label do checkbox ou radio
+
+Exemplo:
+```html
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+        Default checkbox
+    </label>
+</div>
+```
+
+Se desejar deixar o checkbox ou radio inline, basta adicionar a classe d-flex.
+
+Exemplo:
+```html
+<h3 class="m-3">Inline</h3>
+<div class="d-flex">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">1</label>
+    </div>
+    <div class="form-check ms-3">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">2</label>
+    </div>
+    <div class="form-check ms-3">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+    </div>
+</div>
+```
+
+Se quiser que eles fiquem reversos, basta adicionar a classe .form-check-reverse.
+
+Exemplo:
+```html
+<div class="form-check form-switch form-check-reverse">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+    <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+</div>
+```
+
+### Switches
+Para estilizar um switch, é necessário adicionar a classe .form-switch.
+
+Exemplo:
+```html
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+</div>
+```
+
+### Grupo de inputs
+Para agrupar inputs, basta adicionar a classe .input-group ao elemento que será o grupo. Para definir o tamanho do grupo, basta adicionar a classe .input-group-{size}. Os tamanhos que podem ser usados são:
+
+- sm: define o tamanho do grupo como small
+- lg: define o tamanho do grupo como large
+
+Exemplo:
+```html
+<div class="input-group input-group-sm mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+</div>
+```
+
+O input-group tambem pode conter um input-group-text. Que serve para adicionar um texto ao grupo.
