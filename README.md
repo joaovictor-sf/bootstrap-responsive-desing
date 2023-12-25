@@ -38,7 +38,29 @@
         - [Fill e Justify](#fill-e-justify)
     - [Barra de navegação](#barra-de-navegação)
         - [Conteudo](#conteudo)
-
+        - [Posicionamento](#posicionamento-1)
+        - [Scrolling](#scrolling)
+        - [Toggler](#toggler)
+        - [Dropdown](#dropdown)
+        - [Formulário](#formulário)
+        - [Textos](#textos)
+        - [Offcanvas](#offcanvas)
+    - [Formulários](#formulários)
+        - [Formulários básicos](#formulários-básicos)
+        - [Select](#select)
+        - [Range](#range)
+        - [Tamanho](#tamanho-1)
+        - [Checkboxes e radios](#checkboxes-e-radios)
+        - [Switches](#switches)
+        - [Grupo de inputs](#grupo-de-inputs)
+    - [Alertas](#alertas)
+        - [Fechar](#fechar)
+        - [Links](#links)
+    - [Barra de progresso](#barra-de-progresso)
+        - [Tamanho](#tamanho-2)
+        - [Cor](#cor)
+        - [Label](#label)
+        - [Múltiplas barras](#múltiplas-barras)
 # Bootstrap
 Bootstrap é um framework front-end que facilita a criação de sites responsivos e mobile-first. Ele é composto por um conjunto de classes CSS e, em alguns casos, JavaScript, que definem a aparência e o comportamento de diversos elementos HTML.
 
@@ -999,3 +1021,105 @@ Exemplo:
 ```
 
 O input-group tambem pode conter um input-group-text. Que serve para adicionar um texto ao grupo.
+
+## Alertas
+Para criar um alerta, basta adicionar a classe .alert ao elemento que será o alerta. Para definir a cor do alerta, basta adicionar a classe .alert-{color}. As cores que podem ser usadas são as classes de cores do Bootstrap.
+
+Exemplo:
+```html
+<div class="alert alert-primary">Alerta primário</div>
+```
+
+### Fechar
+Para adicionar um botão de fechar ao alerta, basta adicionar o atributo data-bs-dismiss="alert" ao botão.
+
+Exemplo:
+```html
+<div class="alert alert-primary alert-dismissible fade show">
+    Alerta primário
+    <button class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+```
+
+### Links
+Para adicionar um link ao alerta, basta adicionar a classe .alert-link ao elemento que será o link.
+
+Exemplo:
+```html
+<div class="alert alert-primary">
+    Alerta primário
+    <a href="#" class="alert-link">Link</a>
+</div>
+```
+
+## Barra de progresso
+Para criar uma barra de progresso, basta adicionar a classe .progress ao elemento que será a barra de progresso. Para definir o estilo da barra de progresso, basta adicionar a classe .progress-{style}. Os estilos que podem ser usados são:
+
+- progress: define o estilo da barra de progresso como normal
+- progress-striped: define o estilo da barra de progresso como striped
+- progress-animated: define o estilo da barra de progresso como animated
+
+Exemplo:
+```html
+<div class="progress">
+    <div class="progress-bar" style="width: 25%"></div>
+</div>
+```
+
+### Tamanho
+Para definir o tamanho da barra de progresso, basta adicionar a classe .progress-{size}. Os tamanhos que podem ser usados são:
+
+- sm: define o tamanho da barra de progresso como small
+- lg: define o tamanho da barra de progresso como large
+
+Exemplo:
+```html
+<div class="progress progress-sm">
+    <div class="progress-bar" style="width: 25%"></div>
+</div>
+```
+
+Você tambem pode definir o tamanho da barra de progresso modificando as propriedades width e height.
+
+Exemplo:
+```html
+<div class="progress" style="height: 1px;">
+    <div class="progress-bar" style="width: 25%"></div>
+</div>
+```
+
+### Cor
+Para definir a cor da barra de progresso, basta adicionar uma das classes de cores do Bootstrap.
+
+Exemplo:
+```html
+<div class="progress">
+    <div class="progress-bar bg-primary" style="width: 25%"></div>
+</div>
+```
+
+### Label
+Para adicionar um label a barra de progresso, basta adicionar a classe .progress-bar-label ao elemento que será o label.
+
+Exemplo:
+```html
+<div class="progress">
+    <div class="progress-bar" style="width: 25%">
+        <span class="progress-bar-label">25%</span>
+    </div>
+</div>
+```
+
+### Múltiplas barras
+Para criar múltiplas barras de progresso, basta adicionar multiplos elementos com a classe .progress-bar.
+
+Exemplo:
+```html
+<div class="progress">
+    <div class="progress-bar" style="width: 15%"></div>
+    <div class="progress-bar bg-success" style="width: 30%"></div>
+    <div class="progress-bar bg-info" style="width: 20%"></div>
+</div>
+```
+
+
