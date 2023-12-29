@@ -1122,4 +1122,217 @@ Exemplo:
 </div>
 ```
 
+## Tabelas
+Para criar uma tabela, basta adicionar a classe .table ao elemento que será a tabela. Para definir o estilo da tabela, basta adicionar a classe .table-{style}. Os estilos que podem ser usados são:
 
+- table: define o estilo da tabela como normal
+- table-striped: faz com que as linhas da tabela sejam listradas
+- table-striped-columns: faz com que as colunas da tabela sejam listradas
+- table-bordered: faz com que a tabela tenha bordas
+- table-borderless: faz com que a tabela não tenha bordas
+- table-hover: faz com que as linhas da tabela mudem de cor quando o usuário passar o mouse sobre elas
+- table-dark: define o estilo da tabela como dark
+- table-sm: define o estilo da tabela como small
+
+Exemplo:
+```html
+<table class="table table-striped table-bordered table-hover table-dark table-sm">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>João</td>
+            <td>20</td>
+            <td>Masculino</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>18</td>
+            <td>Feminino</td>
+        </tr>
+        <tr>
+            <td>José</td>
+            <td>25</td>
+            <td>Masculino</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### Cores de fundo
+Para definir a cor de fundo de uma linha, basta adicionar a classe .table-{color} ao elemento que será a linha. As cores que podem ser usadas são as classes de cores do Bootstrap.
+
+Exemplo:
+```html
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-primary">
+            <td>João</td>
+            <td>20</td>
+            <td>Masculino</td>
+        </tr>
+        <tr class="table-secondary">
+            <td>Maria</td>
+            <td>18</td>
+            <td>Feminino</td>
+        </tr>
+        <tr class="table-success">
+            <td>José</td>
+            <td>25</td>
+            <td>Masculino</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+Se a tabela tiver bordas, a cor da borda será a mesma da cor de fundo. Para mudar a cor da borda, basta adicionar a classe .border-{color} ao elemento que será a linha.
+
+### Table group dividers
+Adicione uma borda mais espessa e mais escura entre os grupos de tabelas - &lt;thead>, &lt;tbody> e &lt;tfoot> - com .table-group-divider. Personalize a cor alterando o border-top-color.
+
+Exemplo:
+```html
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr>
+            <td>João</td>
+            <td>20</td>
+            <td>Masculino</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>18</td>
+            <td>Feminino</td>
+        </tr>
+        <tr>
+            <td>José</td>
+            <td>25</td>
+            <td>Masculino</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### Tabelas responsivas
+Para criar uma tabela responsiva, basta adicionar a classe .table-responsive ao elemento que será a tabela.
+
+Exemplo:
+```html
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>20</td>
+                <td>Masculino</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>18</td>
+                <td>Feminino</td>
+            </tr>
+            <tr>
+                <td>José</td>
+                <td>25</td>
+                <td>Masculino</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
+
+Você tambem pode adicionar a classe .table-responsive-{breakpoint} para definir o comportamento da tabela em telas pequenas. Os breakpoints que podem ser usados são:
+
+- sm: define o comportamento da tabela em telas pequenas como scroll
+- md: define o comportamento da tabela em telas médias como scroll
+- lg: define o comportamento da tabela em telas grandes como scroll
+- xl: define o comportamento da tabela em telas extra grandes como scroll
+- xxl: define o comportamento da tabela em telas extra extra grandes como scroll
+
+## Paginação
+Para criar uma paginação, basta adicionar a classe .pagination ao elemento que será a paginação.
+
+Exemplo:
+```html
+<ul class="pagination">
+    <li class="page-item"><a href="#" class="page-link">1</a></li>
+    <li class="page-item"><a href="#" class="page-link">2</a></li>
+    <li class="page-item"><a href="#" class="page-link">3</a></li>
+</ul>
+```
+
+### Tamanho
+Para definir o tamanho da paginação, basta adicionar a classe .pagination-{size}. Os tamanhos que podem ser usados são:
+
+- sm: define o tamanho da paginação como small
+- lg: define o tamanho da paginação como large
+
+Exemplo:
+```html
+<ul class="pagination pagination-sm">
+    <li class="page-item"><a href="#" class="page-link">1</a></li>
+    <li class="page-item"><a href="#" class="page-link">2</a></li>
+    <li class="page-item"><a href="#" class="page-link">3</a></li>
+</ul>
+```
+
+### Com icons
+Para adicionar icons a paginação, basta adicionar &-laquo; ou &-raquo; dentro do elemento que será o link.
+
+Exemplo:
+```html
+<ul class="pagination">
+    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
+    <li class="page-item"><a href="#" class="page-link">1</a></li>
+    <li class="page-item"><a href="#" class="page-link">2</a></li>
+    <li class="page-item"><a href="#" class="page-link">3</a></li>
+    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+</ul>
+```
+
+### Alinhamento
+Para alinhar a paginação, basta adicionar a classe .justify-content-{value}. Os valores que podem ser usados são:
+
+- start: alinha a paginação a esquerda
+- center: alinha a paginação ao centro
+- end: alinha a paginação a direita
+- around: distribui os itens igualmente com espaços iguais entre eles
+- between: distribui os itens igualmente com espaços maiores entre eles
+- evenly: distribui os itens igualmente com espaços iguais entre eles
+
+Exemplo:
+```html
+<ul class="pagination justify-content-center">
+    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
+    <li class="page-item"><a href="#" class="page-link">1</a></li>
+    <li class="page-item"><a href="#" class="page-link">2</a></li>
+    <li class="page-item"><a href="#" class="page-link">3</a></li>
+    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+</ul>
+```
