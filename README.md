@@ -1336,3 +1336,136 @@ Exemplo:
     <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
 </ul>
 ```
+
+## Cartões
+Um cartão é um container flexível que pode conter quase qualquer conteúdo. Para criar um cartão, basta adicionar a classe .card ao elemento que será o cartão.
+
+Exemplo:
+```html
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Título</h5>
+        <p class="card-text">Texto</p>
+    </div>
+</div>
+```
+
+### Título e texto
+Para adicionar um título ao cartão, basta adicionar a classe .card-title ao elemento que será o título. Para adicionar um texto ao cartão, basta adicionar a classe .card-text ao elemento que será o texto.
+
+Exemplo:
+```html
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Título</h5>
+        <p class="card-text">Texto</p>
+    </div>
+</div>
+```
+
+Se quiser acrescentar um subtítulo, basta adicionar a classe .card-subtitle ao elemento que será o subtítulo.
+
+### Links
+Para adicionar um link ao cartão, basta adicionar a classe .card-link ao elemento que será o link.
+
+Exemplo:
+```html
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Título</h5>
+        <p class="card-text">Texto</p>
+        <a href="#" class="card-link">Link</a>
+    </div>
+</div>
+```
+
+### Imagem
+Para adicionar uma imagem ao cartão, basta adicionar a classe .card-img-{position} ao elemento que será a imagem. As posições que podem ser usadas são:
+
+- top: define a posição da imagem como top
+- bottom: define a posição da imagem como bottom
+- start: define que a imagem ficará a esquerda
+- end: define que a imagem ficará a direita
+
+Exemplo:
+```html
+<div class="card">
+    <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Título</h5>
+        <p class="card-text">Texto</p>
+    </div>
+</div>
+```
+
+#### Imagem com overlay
+Para adicionar um overlay a imagem, basta adicionar a classe .card-img-overlay ao elemento que será o overlay.
+
+Exemplo:
+```html
+<div class="card">
+    <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+    <div class="card-img-overlay">
+        <h5 class="card-title">Título</h5>
+        <p class="card-text">Texto</p>
+    </div>
+</div>
+```
+
+### Cartões de cabeçalho e rodapé
+Para criar um cartão de cabeçalho, basta adicionar a classe .card-header ao elemento que será o cabeçalho. Para criar um cartão de rodapé, basta adicionar a classe .card-footer ao elemento que será o rodapé.
+
+Exemplo:
+```html
+<div class="card">
+    <div class="card-header">
+        Cabeçalho
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Título</h5>
+        <p class="card-text">Texto</p>
+    </div>
+    <div class="card-footer">
+        Rodapé
+    </div>
+</div>
+```
+
+### Grupos de cartões
+Para agrupar cartões, basta adicionar a classe .card-group ao elemento que será o grupo.
+
+Exemplo:
+```html
+<div class="card-group">
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+```
