@@ -1469,3 +1469,145 @@ Exemplo:
   </div>
 </div>
 ```
+
+## Icones
+O Bootstrap possui uma biblioteca de icones chamada Bootstrap Icons. Existem 2 formas de usar os icones do Bootstrap Icons. A primeira é usando o Bootstrap Icons como uma fonte. Para isso, basta adicionar o seguinte link no head do seu documento HTML:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+```
+
+A segunda forma é usando o Bootstrap Icons como um SVG. Para isso, basta adicionar o seguinte link no head do seu documento HTML:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+```
+
+Para escolher um icone, basta acessar o site do Bootstrap Icons e escolher o icone que você deseja usar. Depois, basta copiar o código do icone e colar no seu documento HTML.
+
+Exemplo:
+```html
+<i class="bi bi-alarm"></i>
+```
+
+## Layouts
+O Bootstrap possui 2 layouts: flex e grid. O layout flex é usado para criar layouts simples e o layout grid é usado para criar layouts mais complexos.
+
+### Container
+Um container é um elemento que contém os elementos da página. Para criar um container, basta adicionar a classe .container ao elemento que será o container.
+
+Exemplo:
+```html
+<div class="container">
+    <h1>Container</h1>
+</div>
+```
+
+Um container pode ser implementado de 3 formas: container, container-fluid e container-{breakpoint}.
+
+- container: define o container que se ajusta a largura de telas pequenas
+- container-fluid: define que o container ocupe toda a largura da tela
+- container-{breakpoint}: define o container que se ajusta a largura que você definir
+
+### Grid
+O grid é um sistema de 12 colunas que pode ser usado para criar layouts mais complexos.
+
+Uma grid é composta por 3 elementos: container, row(linha) e col(coluna).
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col">
+            <h1>Coluna 2</h1>
+        </div>
+        <div class="col">
+            <h1>Coluna 3</h1>
+        </div>
+    </div>
+</div>
+```
+
+Uma row pode ter no máximo 12 colunas. Se você adicionar mais de 12 colunas em uma row, as colunas que não couberem na row irão para a linha de baixo.
+
+#### Tamanho
+Para definir o tamanho de uma coluna, basta adicionar a classe .col-{size} ao elemento que será a coluna. Os tamanhos que podem são os numeros de 1 a 12.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col-3">
+            <h1>Coluna 2</h1>
+        </div>
+        <div class="col-3">
+            <h1>Coluna 3</h1>
+        </div>
+    </div>
+</div>
+```
+
+Você tambem pode definir o tamanho que uma coluna terá em um determinado breakpoint. Para isso, basta adicionar a classe .col-{breakpoint}-{size} ao elemento que será a coluna.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col-3 col-md-6">
+            <h1>Coluna 2</h1>
+        </div>
+        <div class="col-3 col-md-3">
+            <h1>Coluna 3</h1>
+        </div>
+    </div>
+</div>
+```
+
+Ao ultilizar um breakpoint, por exemplo, md, quando a tela for menor que o breakpoint, as colunas irão ocupar toda a largura do container, e ficaram empilhadas uma em cima da outra.
+
+#### Ordem
+Para definir a ordem das colunas, basta adicionar a classe .order-{posição} ao elemento que será a coluna. Os tamanhos que podem ser usados são os numeros de 1 a 12.
+
+ATENÇÃO: As colunas afetadas tem que obrigadoriamente possuir a classse .order-{posição}. Por exemplo, se você quiser que a coluna 3 fique na posição 1, você tem que adicionar a classe .order-1 na coluna 3 e a classe .order-2, ou outro maior numero, na coluna 1.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-6 order-2">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col-3 order-3">
+            <h1>Coluna 2</h1>
+        </div>
+        <div class="col-3 order-1">
+            <h1>Coluna 3</h1>
+        </div>
+    </div>
+</div>
+```
+
+#### Offset
+Quando você ultiliza o offset, você está definindo quantas colunas a coluna irá se afastar da esquerda. Para definir o offset de uma coluna, basta adicionar a classe .offset-{size} ao elemento que será a coluna. Os tamanhos que podem ser usados são os numeros de 1 a 12.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1>Coluna 1</h1>
+        </div>
+    </div>
+</div>
+```
+
+Você tambem pode definir o offset que uma coluna terá em um determinado breakpoint. Para isso, basta adicionar a classe .offset-{breakpoint}-{size} ao elemento que será a coluna.

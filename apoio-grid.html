@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <title>Bootstrap - Sistema de grids</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+
+    <style type="text/css">
+      .marcador {
+        background: #fe9d9d;
+        border: 1px solid #f94646;
+      }
+
+      .marcador2 {
+        background: #fe9d9d;
+        border: 1px solid #f94646;
+        height: 120px;
+      }
+
+      .marcador-container {
+        background: #5bf946;
+        border: 1px solid #36ae26;
+      }
+
+      .borda {
+        border: 1px solid blue;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>Professor</h1>
+
+    <div class="container marcador-container">
+
+      <div class="row">
+
+        <div class="marcador 
+        col-md-4">
+
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor neque, ultrices vel molestie varius, finibus ut ex. Etiam quis mattis lorem. In ut ante non turpis tempor hendrerit ac pulvinar turpis. Curabitur risus tellus, egestas id erat a, fringilla accumsan lacus.</p>
+          <button class="btn btn-warning">Leia mais</button>
+        </div>
+
+        <div class="marcador 
+        col-md-4">
+
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor neque, ultrices vel molestie varius, finibus ut ex. Etiam quis mattis lorem. In ut ante non turpis tempor hendrerit ac pulvinar turpis. Curabitur risus tellus, egestas id erat a, fringilla accumsan lacus.</p>
+          <button class="btn btn-warning">Leia mais</button>
+        </div>
+
+        <div class="marcador 
+        col-md-4">
+
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor neque, ultrices vel molestie varius, finibus ut ex. Etiam quis mattis lorem. In ut ante non turpis tempor hendrerit ac pulvinar turpis. Curabitur risus tellus, egestas id erat a, fringilla accumsan lacus.</p>
+          <button class="btn btn-warning">Leia mais</button>
+        </div>
+        
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <h2>Conficurações do Grid</h2>
+    <div class="container marcador-container">
+
+      <h3>Largura fixa</h3>
+      <div class="row mb-3">
+        <div class="col marcador">área 1</div>
+        <div class="col marcador">área 2</div>
+        <div class="col marcador">área 3</div>
+        <div class="col marcador">área 4</div>
+      </div>
+
+      <h3>Largura automática (auto-lauout)</h3>
+      <div class="row mb-3">
+        <div class="col marcador">área 1</div>
+        <div class="col-4 marcador">área 2</div>
+        <div class="col-6 marcador">área 3</div>
+      </div>
+
+      <h3>Largura igual empilhada</h3>
+      <div class="row mb-3">
+        <div class="col-sm marcador">área 1</div>
+        <div class="col-sm marcador">área 2</div>
+        <div class="col-sm marcador">área 3</div>
+      </div>
+
+      <h3>Ordenando</h3>
+      <div class="row mb-3">
+        <div class="col marcador order-3">área 1</div>
+        <div class="col marcador order-4">área 2</div>
+        <div class="col marcador order-1">área 3</div>
+      </div>
+
+      <h3>Offset</h3>
+      <div class="row mb-3">
+        <div class="col-md-6 offset-md-3 marcador">Login...</div>
+      </div>
+
+      <h3>offset multiplos alinhamentos</h3>
+      <div class="row mb-3">
+        <div class="col-sm-3 offset-sm-3 marcador">Conteúdo 1</div>
+        <div class="col-sm-3 offset-sm-3 marcador">Conteúdo 2</div>
+      </div>
+
+      <h3>Aninhamento</h3>
+      <div class="row mb-3">
+        <div class="col-sm-6" style="border: 1px solid red;">
+          level 1: col-sm-6
+          <div class="row">
+            <div class="col-8 col-sm-6" style="border: 1px solid blue;">
+              level 2: col-8 col-sm-6
+            </div>
+            <div class="col-4 col-sm-6" style="border: 1px solid blue;">
+              level 2: col-4 col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>alinhamento de Grid</h2>
+    <div class="container marcador-container">
+      <h3>Alinhamento vertical (align-items-ALINHAMENTO: start, center, end)</h3>
+      <div class="row marcador2 align-items-center">
+        <div class="col borda">Área 1</div>
+        <div class="col borda">Área 2</div>
+        <div class="col borda">Área 3</div>
+      </div>
+
+      <h3>Alinhamento vertical individual (align-self-ALINHAMENTO: start, center, end)</h3>
+      <div class="row marcador2">
+        <div class="col borda align-self-end">Área 1</div>
+        <div class="col borda align-self-start">Área 2</div>
+        <div class="col borda align-self-center">Área 3</div>
+      </div>
+
+      <h3>Alinhamento horizontal colunas(justify-content-ALINHAMENTO: start, center, end)</h3>
+      <div class="row marcador2 justify-content-end">
+        <div class="col-2 borda">Área 1</div>
+        <div class="col-2 borda">Área 2</div>
+        <div class="col-2 borda">Área 3</div>
+      </div>
+
+      <h3>Distribuição (justify-content-ALINHAMENTO: around, between)</h3>
+      <div class="row marcador2 justify-content-between">
+        <div class="col-2 borda">Área 1</div>
+        <div class="col-2 borda">Área 2</div>
+        <div class="col-2 borda">Área 3</div>
+        <div class="col-2 borda">Área 4</div>
+      </div>
+
+      <h3>Removendo espaçamento</h3>
+      <div class="row marcador2 g-0">
+        <div class="col-2 borda">Área 1</div>
+        <div class="col-2 borda">Área 2</div>
+        <div class="col-2 borda">Área 3</div>
+      </div>
+    </div>
+
+    <hr>
+    
+    <h1>Bootstrap - Sistema de container</h1>
+    <div class="container marcador-container">container: .container, which sets a max-width at each responsive breakpoint</div>
+    <div class="container-md marcador-container">container-md: .container-{breakpoint}, which is width: 100% until the specified breakpoint. Mobile first</div>
+    <div class="container-fluid marcador-container">container-fluid: .container-fluid, which is width: 100% at all breakpoints</div>
+
+    <br><br><br>
+
+    <h1>Bootstrap - Sistema de grids</h1>
+
+    <div class="container text-center marcador-container">
+      <div class="row"><!-- row: linha -->
+        <div class="col marcador">
+          Column
+        </div>
+        <div class="col marcador">
+          Column
+        </div>
+        <div class="col marcador">
+          Column
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <h2>Width igual</h2>
+    <div class="container text-center marcador-container mt-3">
+      <div class="row">
+        <div class="col marcador">
+          1 of 2
+        </div>
+        <div class="col marcador">
+          2 of 2
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col marcador">
+          1 of 3
+        </div>
+        <div class="col marcador">
+          2 of 3
+        </div>
+        <div class="col marcador">
+          3 of 3
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h2>Width diferente</h2>
+
+    <div class="container text-center marcador-container">
+      <div class="row">
+        <div class="col marcador">
+          1 of 3
+        </div>
+        <div class="col-6 marcador">
+          2 of 3 (wider)
+        </div>
+        <div class="col marcador">
+          3 of 3
+        </div>
+      </div>
+      <div class="row">
+        <div class="col marcador">
+          1 of 3
+        </div>
+        <div class="col-5 marcador">
+          2 of 3 (wider)
+        </div>
+        <div class="col marcador">
+          3 of 3
+        </div>
+      </div>
+    </div>
+
+    <!-- Cada row possui 12 colunas -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  </body>
+</html>
