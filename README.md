@@ -61,6 +61,32 @@
         - [Cor](#cor)
         - [Label](#label)
         - [Múltiplas barras](#múltiplas-barras)
+    - [Tabelas](#tabelas)
+        - [Cores de fundo](#cores-de-fundo)
+        - [Table group dividers](#table-group-dividers)
+        - [Tabelas responsivas](#tabelas-responsivas)
+    - [Paginação](#paginação)
+        - [Tamanho](#tamanho-3)
+        - [Com icons](#com-icons)
+        - [Alinhamento](#alinhamento-2)
+    - [Cartões](#cartões)
+        - [Título e texto](#título-e-texto)
+        - [Links](#links-1)
+        - [Imagem](#imagem)
+            - [Imagem com overlay](#imagem-com-overlay)
+        - [Cartões de cabeçalho e rodapé](#cartões-de-cabeçalho-e-rodapé)
+        - [Grupos de cartões](#grupos-de-cartões)
+    - [Icones](#icones)
+    - [Layouts](#layouts)
+        - [Container](#container)
+        - [Grid](#grid)
+            - [Tamanho](#tamanho-4)
+            - [Alinhamentos](#alinhamento-3)
+                - [Vertical](#vertical)
+                - [Horizontal](#horizontal)
+            - [Ordem](#ordem)
+            - [Offset](#offset)
+            - [Colunas em uma linha](#colunas-em-uma-linha)
 # Bootstrap
 Bootstrap é um framework front-end que facilita a criação de sites responsivos e mobile-first. Ele é composto por um conjunto de classes CSS e, em alguns casos, JavaScript, que definem a aparência e o comportamento de diversos elementos HTML.
 
@@ -1574,6 +1600,44 @@ Exemplo:
 
 Ao ultilizar um breakpoint, por exemplo, md, quando a tela for menor que o breakpoint, as colunas irão ocupar toda a largura do container, e ficaram empilhadas uma em cima da outra.
 
+#### Colunas em uma linha
+É possivel definir a quantidade de colunas em uma row(linha). Para isso basta adicionar a classe .row-cols-{quantidade} ao elemento que será a row. As quantidades que podem ser usadas são os numeros de 1 a 12.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row row-cols-1">
+        <div class="col">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col">
+            <h1>Coluna 2</h1>
+        </div>
+        <div class="col">
+            <h1>Coluna 3</h1>
+        </div>
+    </div>
+</div>
+```
+O seguinte exemplo terá apenas 1 coluna.
+
+Vale lembrar que se uma coluna ocupar o expaço maior que o automatico, as outras colunas irão para a linha de baixo.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row row-cols-4">
+        <div class="col borda">Column</div>
+        <div class="col borda">Column</div>
+        <div class="col-6 borda">Column</div>
+        <div class="col borda">Column</div>
+    </div>
+</div>
+```
+No caso acima, em vez de 4 colunas, teremos apenas 3 colunas, pois a coluna 3 ocupa o espaço de 2 colunas.
+
+Tambem é possivel deixar fazer de maneira responsiva. Para isso, basta adicionar a classe .row-cols-{breakpoint}-{quantidade} ao elemento que será a row.
+
 #### Ordem
 Para definir a ordem das colunas, basta adicionar a classe .order-{posição} ao elemento que será a coluna. Os tamanhos que podem ser usados são os numeros de 1 a 12.
 
@@ -1611,3 +1675,61 @@ Exemplo:
 ```
 
 Você tambem pode definir o offset que uma coluna terá em um determinado breakpoint. Para isso, basta adicionar a classe .offset-{breakpoint}-{size} ao elemento que será a coluna.
+
+#### Alinhamentos
+
+##### Vertical
+Para alinhar as colunas verticalmente, basta adicionar a classe .align-items-{posição} ao elemento que será a row. As posições que podem ser usadas são:
+
+- start: as colunaas começam no topo da row
+- center: as colunas ficam no centro da row
+- end: as colunas ficam no final da row
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-6">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col-6">
+            <h1>Coluna 2</h1>
+        </div>
+    </div>
+</div>
+```
+
+Tambem é possivel alinhar cada coluna individualmente. Para isso, basta adicionar a classe .align-self-{posição} ao elemento que será a coluna.
+
+Exemplo:
+```html
+<div class="row">
+        <div class="col align-self-end">Área 1</div>
+        <div class="col align-self-start">Área 2</div>
+        <div class="col align-self-center">Área 3</div>
+</div>
+```
+
+##### Horizontal
+Para alinhar as colunas horizontalmente, basta adicionar a classe .justify-content-{posição} ao elemento que será a row. As posições que podem ser usadas são:
+
+- start: as colunas começam a esquerda da row
+- center: as colunas ficam no centro da row
+- end: as colunas ficam a direita da row
+- around: as colunas ficam distribuidas igualmente com espaços iguais entre elas
+- between: as colunas ficam distribuidas igualmente com espaços maiores entre elas
+- evenly: as colunas ficam distribuidas igualmente com espaços iguais entre elas
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col-6">
+            <h1>Coluna 2</h1>
+        </div>
+    </div>
+</div>
+```
