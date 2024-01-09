@@ -87,6 +87,21 @@
             - [Ordem](#ordem)
             - [Offset](#offset)
             - [Colunas em uma linha](#colunas-em-uma-linha)
+        - [Gutters](#gutters)
+            - [Gutters Horizontais](#gutters-horizontais)
+            - [Gutters Verticais](#gutters-verticais)
+            - [Sem gutters](#sem-gutters)
+        - [Flex](#flex)
+            - [Direção](#direção)
+            - [Alinhamento](#alinhamento-4)
+            - [Fill](#fill)
+            - [Grow e Shrink](#grow-e-shrink)
+            - [Ordem](#ordem-1)
+            - [Margin auto](#margin-auto)
+            - [Wrap](#wrap)
+            - [Align content](#align-content)
+    
+        
 # Bootstrap
 Bootstrap é um framework front-end que facilita a criação de sites responsivos e mobile-first. Ele é composto por um conjunto de classes CSS e, em alguns casos, JavaScript, que definem a aparência e o comportamento de diversos elementos HTML.
 
@@ -1733,3 +1748,268 @@ Exemplo:
     </div>
 </div>
 ```
+
+#### Quebra de linha
+Para quebrar uma linha, basta adicionar a classe .w-100 ao elemento que será a coluna.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-6">
+            <h1>Coluna 2</h1>
+        </div>
+        <div class="col-6">
+            <h1>Coluna 3</h1>
+        </div>
+    </div>
+</div>
+```
+
+Tambem é possivel quebrar uma linha em um determinado breakpoint. Para isso, basta adicionar as classes d-none d-{breakpoint}-block ao elemento que quebrará a linha.
+
+### Gutter
+O gutter é o espaço entre as colunas. Para definir o gutter, basta adicionar a classe .g-{size} ao elemento que será a row.
+
+<b>Como Funcionam:</b> 
+- O gutter é definido pelo padding-left e padding-right da row. Além disso, ele usa o margin-left e margin-right negativo das colunas para compensar o padding da row.
+- Eles podem ser responsivos.
+
+#### Gutters Horizontais
+Para definir o gutter horizontal, basta adicionar a classe .gx-{size} ao elemento que será a row.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row gx-5">
+        <div class="col">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col">
+            <h1>Coluna 2</h1>
+        </div>
+    </div>
+</div>
+```
+
+#### Gutters Verticais
+Para definir o gutter vertical, basta adicionar a classe .gy-{size} ao elemento que será a row.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row gy-5">
+        <div class="col">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col">
+            <h1>Coluna 2</h1>
+        </div>
+    </div>
+</div>
+```
+
+#### Sem Gutters
+Para remover o gutter, basta adicionar a classe .g-0 ao elemento que será a row.
+
+Exemplo:
+```html
+<div class="container">
+    <div class="row g-0">
+        <div class="col">
+            <h1>Coluna 1</h1>
+        </div>
+        <div class="col">
+            <h1>Coluna 2</h1>
+        </div>
+    </div>
+</div>
+```
+
+### Flex
+O flex é um sistema de layout que pode ser usado para criar layouts simples.
+
+Para usar o flex, basta adicionar a classe .d-flex ao elemento que será o container.
+
+Exemplo:
+```html
+<div class="d-flex">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+Variações responsivas do flex:
+
+- .d-flex
+- .d-inline-flex
+- .d-sm-flex
+- .d-sm-inline-flex
+- .d-md-flex
+- .d-md-inline-flex
+- .d-lg-flex
+- .d-lg-inline-flex
+- .d-xl-flex
+- .d-xl-inline-flex
+- .d-xxl-flex
+- .d-xxl-inline-flex
+
+#### Direção
+Use .flex-row para definir uma direção horizontal (o padrão do navegador), ou .flex-row-reverse para iniciar a direção horizontal do lado oposto.
+
+Exemplo:
+```html
+<div class="d-flex flex-row">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+Use .flex-column para definir uma direção vertical ou .flex-column-reverse para iniciar a direção vertical do lado oposto.
+
+Exemplo:
+```html
+<div class="d-flex flex-column">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+As direções tambem podem ser usadas em um determinado breakpoint. Para isso, basta adicionar a classe .flex-{breakpoint}-{direção} ao elemento que será o container.
+
+#### Alinhamento
+Ultilizando as classes .justify-content-{posição} e .align-items-{posição}, você pode alinhar os itens do flex.
+
+<b>justify-content-{posição}</b>
+
+Exemplo:
+```html
+<div class="d-flex align-items-center">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+As posições que podem ser usadas são:
+
+- start: alinha os itens a esquerda
+- center: alinha os itens ao centro
+- end: alinha os itens a direita
+- around: distribui os itens igualmente com espaços iguais entre eles
+- between: distribui os itens igualmente com espaços maiores entre eles
+- evenly: distribui os itens igualmente com espaços iguais entre eles
+
+<b>align-items-{posição}</b>
+
+Exemplo:
+```html
+<div class="d-flex lign-items-center">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+As posições que podem ser usadas são:
+
+- start: alinha os itens ao topo
+- center: alinha os itens ao centro
+- end: alinha os itens a base
+- baseline: alinha os itens a base da linha de base
+- stretch: estica os itens para preencher o container
+
+Ambas as maneiras podem ser feitas de forma responsiva. Para isso, basta adicionar a classe .justify-content-{breakpoint}-{posição} e .align-items-{breakpoint}-{posição} ao elemento que será o container.
+
+Também é possivel alinhar uma coluna individualmente. Para isso, basta adicionar a classe <b>.align-self-{posição}</b> ao elemento que será a coluna.
+
+#### Fill
+Para que os itens do flex preencham o container, basta adicionar a classe .flex-fill ao elemento que será o item.
+
+Exemplo:
+```html
+<div class="d-flex">
+    <div class="p-2 flex-fill">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+#### Grow e Shrink
+Para definir o grow e o shrink de um item do flex, basta adicionar a classe .flex-{grow}-{shrink} ao elemento que será o item.
+
+Exemplo:
+```html
+<div class="d-flex">
+    <div class="p-2 flex-grow-1">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+
+<div class="d-flex">
+    <div class="p-2 flex-shrink-1">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+Ambos podem ser usados de forma responsiva. Para isso, basta adicionar a classe .flex-{breakpoint}-{grow}-{shrink} ao elemento que será o item.
+
+#### Margin auto
+O flex consegue fazer coisas bem interessantes com o margin auto. Para usar o margin auto, basta adicionar a classe .ms-auto ao elemento que será o item.
+
+Exemplo:
+```html
+<div class="d-flex">
+    <div class="p-2 ms-auto">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+#### Wrap
+Para quebrar uma linha, basta adicionar a classe .flex-wrap ao elemento que será o container.
+
+Exemplo:
+```html
+<div class="d-flex flex-wrap">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+Tambem é possivel quebrar uma linha em um determinado breakpoint. Para isso, basta adicionar as classes .flex-{breakpoint}-nowrap ao elemento que será o container.
+
+#### Order
+Assim como no Grid, no flex tambem é possivel definir a ordem dos itens. Para isso, basta adicionar a classe .order-{posição} ao elemento que será o item.
+
+#### Align content
+COm o align content, você pode alinhar as linhas do flex. Para isso, basta adicionar a classe .align-content-{posição} ao elemento que será o container.
+
+Exemplo:
+```html
+<div class="d-flex flex-wrap align-content-center">
+    <div class="p-2">Flex item 1</div>
+    <div class="p-2">Flex item 2</div>
+    <div class="p-2">Flex item 3</div>
+</div>
+```
+
+As posições que podem ser usadas são:
+
+- start: alinha as linhas a esquerda
+- center: alinha as linhas ao centro
+- end: alinha as linhas a direita
+- around: distribui as linhas igualmente com espaços iguais entre elas
+- between: distribui as linhas igualmente com espaços maiores entre elas
+- stretch: estica as linhas para preencher o container
+
+## Accordion
