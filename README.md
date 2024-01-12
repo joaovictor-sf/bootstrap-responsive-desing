@@ -2012,4 +2012,101 @@ As posições que podem ser usadas são:
 - between: distribui as linhas igualmente com espaços maiores entre elas
 - stretch: estica as linhas para preencher o container
 
-## Accordion
+## Acordeão
+Um acordeão é um componente que pode ser usado para mostrar e esconder conteúdo. Para criar um acordeão, basta adicionar a classe .accordion ao elemento que será o acordeão.
+
+Exemplo:
+```html
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Accordion Item #1
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Accordion Item #2
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Accordion Item #3
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+Para o acordeão funcionar é necessario ultilizar multiplas classes. São elas:
+
+- .accordion: define o elemento como um acordeão
+- .accordion-item: define o elemento como um item do acordeão
+- .accordion-header: define o elemento como um cabeçalho do acordeão
+- .accordion-button: define o elemento como um botão do acordeão
+- .accordion-collapse: define o elemento como um conteúdo do acordeão
+- .accordion-body: define o elemento como um corpo do acordeão
+
+Além disso, é necessario ultilizar os atributos data-bs-toggle e data-bs-target. O atributo data-bs-toggle define o elemento como um acordeão e o atributo data-bs-target define o elemento que será o conteúdo do acordeão.
+
+### Acordeão sem bordas
+Um acordeão, por padrão, possui bordas, cantos arrerdondados e margens. Para remover essas bordas, basta adicionar a classe .accordion-flush ao elemento que será o acordeão.
+
+Exemplo:
+```html
+<div class="accordion accordion-flush" id="exemplo2">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alvoa">
+            Titulo 1
+          </button>
+        </h2>
+        <div id="alvoa" class="accordion-collapse collapse" data-bs-parent="#exemplo2">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor si</p>
+          </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alvob">
+            Titulo 2
+          </button>
+        </h2>
+        <div id="alvob" class="accordion-collapse collapse" data-bs-parent="#exemplo2">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor si</p>
+          </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alvoc">
+            Titulo 3
+          </button>
+        </h2>
+        <div id="alvoc" class="accordion-collapse collapse" data-bs-parent="#exemplo2">
+          <div class="accordion-body">
+            <p>Lorem ipsum dolor si</p>
+          </div>
+      </div>
+
+    </div>
+```
