@@ -45,6 +45,8 @@
         - [Formulário](#formulário)
         - [Textos](#textos)
         - [Offcanvas](#offcanvas)
+    - [Breadcrumb](#breadcrumb)
+
     - [Formulários](#formulários)
         - [Formulários básicos](#formulários-básicos)
         - [Select](#select)
@@ -100,6 +102,8 @@
             - [Margin auto](#margin-auto)
             - [Wrap](#wrap)
             - [Align content](#align-content)
+    - [Acordeão](#acordeão)
+        - [Acordeão sem bordas](#acordeão-sem-bordas)
     
         
 # Bootstrap
@@ -892,6 +896,36 @@ Quando o usuário clicar no botão, o offcanvas será exibido. Para definir o co
 Quando se usa o offcanvas, é necessário adicionar o atributo data-bs-toggle="offcanvas" e o atributo data-bs-target="#{id}" ao botão que irá abrir o offcanvas. O atributo data-bs-target="#{id}" deve ter o mesmo valor do atributo id do offcanvas.
 
 Se usado em uma navbar dark, você pode precisar adicionar a classes como: text-bg-dark, dropdown-menu-dark e bg-dark.
+
+## Breadcrumb
+Breadcrumb (ou "migalhas de pão", em tradução livre) é um componente de navegação secundária que mostra a localização do usuário em um aplicativo ou site. É uma trilha que mostra o caminho que o usuário fez desde a página inicial até a página atual, permitindo que ele retorne a qualquer ponto ao longo desse caminho.
+
+No Bootstrap 5, um breadcrumb é criado usando listas ordenadas (&lt;ol>) ou não ordenadas (&lt;ul>), com a classe .breadcrumb aplicada ao elemento da lista. Cada item do breadcrumb é então criado usando um elemento de lista (&lt;li>) com a classe .breadcrumb-item. Por fim ultilizamos a classe .active para indicar a página atual.
+
+Exemplo:
+```html
+<nav>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">Library</li>
+        <li class="breadcrumb-item active">Data</li>
+    </ol>
+</nav>
+```
+
+### Mudar o divisor
+Por padrão, o divisor usado em um breadcrumb é uma barra (/). Para alterar o divisor, basta adicionar a classe .breadcrumb-divider-{value} ao elemento da lista.
+
+Exemplo:
+```html
+<nav class="mt-3" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">Library</li>
+        <li class="breadcrumb-item active">Data</li>
+    </ol>
+</nav>
+```
 
 ## Formulários
 
