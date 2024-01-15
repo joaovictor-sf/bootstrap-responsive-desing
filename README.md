@@ -104,7 +104,14 @@
             - [Align content](#align-content)
     - [Acordeão](#acordeão)
         - [Acordeão sem bordas](#acordeão-sem-bordas)
-    
+    - [Carrosel](#carrosel)
+        - [Carrossel com indicadores](#carrossel-com-indicadores)
+        - [Carrossel com legenda](#carrossel-com-legenda)
+        - [Carrossel com slide desaparecendo em vez de deslizar](#carrossel-com-slide-desaparecendo-em-vez-de-deslizar)
+        - [Carrossel automatico](#carrossel-automatico)
+            -[Intervalo individual](#intervalo-individual)
+        - [Observações](#observações)
+
         
 # Bootstrap
 Bootstrap é um framework front-end que facilita a criação de sites responsivos e mobile-first. Ele é composto por um conjunto de classes CSS e, em alguns casos, JavaScript, que definem a aparência e o comportamento de diversos elementos HTML.
@@ -2144,3 +2151,130 @@ Exemplo:
 
     </div>
 ```
+
+## Carrossel
+Um componente de apresentação de slides para percorrer elementos - imagens ou slides de texto - como um carrossel.
+
+Um carrosel é como um slideshow, mas é usado para exibir uma seleção de imagens ou slides de texto em uma página da web. É composto por um controle deslizante que permite que você navegue entre slides, juntamente com controles para pausar, parar, retroceder e avançar automaticamente.
+
+Um carrossel é composto por uma seria de classes. As principais são:
+
+- .carousel: define o elemento como um carrossel
+- .carousel-item: define o elemento como um item do carrossel
+- .carousel-innder: container para os slides
+- .carousel-control-prev: define o elemento como um botão para voltar o slide
+- .carousel-control-prev-icon: o icone do botão para voltar o slide
+- .carousel-control-next: define o elemento como um botão para avançar o slide
+- .carousel-control-next-icon: o icone do botão para avançar o slide
+
+Exemplo:
+```html
+<div id="carouselExample" class="carousel slide w-50">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="img/1-grid-bootstrap.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/2-grid-exemplo.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="img/3-grid-exemplo2.png" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+```
+
+### Carrossel com indicadores
+Para adicionar indicadores ao carrossel, basta adicionar a classe .carousel-indicators ao elemento que será o carrossel.
+
+Exemplo:
+```html
+<div id="carrosel" class="carousel slide w-50 h-50">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2"></button>
+      </div>
+    <div class="carousel-inner">
+        ...
+```
+
+### Carrossel com legenda
+Para adicionar uma legenda ao carrossel, basta adicionar a classe .carousel-caption ao item do carrossel que será a legenda.
+
+Exemplo:
+```html
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="img/1-grid-bootstrap.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+            <h5>Legenda 1</h5>
+            <p>Texto 1</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="img/2-grid-exemplo.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Legenda 2</h5>
+            <p>Texto 2</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="img/3-grid-exemplo2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Legenda 3</h5>
+            <p>Texto 3</p>
+        </div>
+    </div>
+</div>
+```
+
+### Carrossel com slide desaparecendo em vez de deslizar
+Para fazer com que os slides desapareçam em vez de deslizar, basta adicionar a classe .carousel-fade ao elemento que será o carrossel.
+
+Exemplo:
+```html
+<div id="carrosel-fade" class="carousel slide carousel-fade w-50 h-50">
+    ...
+```
+
+### Carrossel automatico
+Para fazer com que o carrossel avance automaticamente, basta adicionar data-bs-ride="carousel" ao elemento que será o carrossel.
+
+Exemplo:
+```html
+<div id="carrosel" class="carousel slide w-50 h-50" data-bs-ride="carousel">
+    ...
+```
+
+É possivel trocar o data-bs-ride="carousel" por data-bs-ride="true". Isso fará que o carrosel comece automaticamente quando ele for interagido pela primeira vez.
+
+#### Intervalo individual
+Para definir o intervalo individual de cada slide, basta adicionar data-bs-interval="{tempo}" ao elemento que será o carrossel. O tempo deve ser definido em milisegundos.
+
+Exemplo:
+```html
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="img/1-grid-bootstrap.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="img/2-grid-exemplo.png" class="d-block w-100" data-bs-interval="1000" alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="img/3-grid-exemplo2.png" class="d-block w-100" data-bs-interval="10000" alt="...">
+    </div>
+</div>
+```
+
+### Observações
+- Por padrão, é possivel navegar entre os slides nos dispositivos moveis deslizando o dedo para a esquerda ou para a direita. Para desativar isso, basta adicionar data-bs-touch="false" ao elemento que será o carrossel.
+- É possivel mudar o tema do carrossel. Para isso, basta adicionar data-bs-theme="dark". Isso fará com que o carrossel fique com o tema escuro.
