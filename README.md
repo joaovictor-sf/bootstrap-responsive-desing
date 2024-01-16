@@ -111,7 +111,12 @@
         - [Carrossel automatico](#carrossel-automatico)
             -[Intervalo individual](#intervalo-individual)
         - [Observações](#observações)
-
+    - [Modal](#modal)
+        - [Observações](#observações-1)
+        - [Modal com scroll](#modal-com-scroll)
+        - [Modal centralizado](#modal-centralizado)
+        - [Modificando o tamanho](#modificando-o-tamanho)
+        - [Modal em tela cheia](#modal-em-tela-cheia)
         
 # Bootstrap
 Bootstrap é um framework front-end que facilita a criação de sites responsivos e mobile-first. Ele é composto por um conjunto de classes CSS e, em alguns casos, JavaScript, que definem a aparência e o comportamento de diversos elementos HTML.
@@ -2278,3 +2283,119 @@ Exemplo:
 ### Observações
 - Por padrão, é possivel navegar entre os slides nos dispositivos moveis deslizando o dedo para a esquerda ou para a direita. Para desativar isso, basta adicionar data-bs-touch="false" ao elemento que será o carrossel.
 - É possivel mudar o tema do carrossel. Para isso, basta adicionar data-bs-theme="dark". Isso fará com que o carrossel fique com o tema escuro.
+
+## Modal
+Um modal é uma janela que é exibida sobre o conteúdo da página. Ele é usado para exibir conteúdo importante de forma semelhante a uma janela pop-up e possui as seguintes partes:
+Um cabeçalho opcional que é exibido na parte superior do modal.
+Um corpo que é o conteúdo principal.
+Um rodapé opcional que é exibido na parte inferior do modal.
+Para criar um modal, adicione a classe .modal ao elemento div que deseja ocultar. Você também precisa adicionar a classe .fade se quiser que o modal tenha um efeito de transição ao abrir e fechar.
+
+Para tornar o modal visível, adicione a classe .show ao elemento div com a classe .modal. Você também pode adicionar a classe .show ao elemento div com a classe .modal-dialog para tornar o modal visível.
+
+Para fechar o modal, adicione o atributo data-bs-dismiss="modal" ao elemento de botão que deseja fechar o modal.
+
+Para criar um modal com cabeçalho, corpo e rodapé, adicione os elementos div com as classes .modal-header, .modal-body e .modal-footer, respectivamente.
+
+Para criar um modal com um botão de fechar, adicione o elemento de botão com a classe .btn-close ao elemento div com a classe .modal-header.
+
+Exemplo:
+```html
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticModal">
+    Launch static backdrop modal
+</button>
+
+<div class="modal fade" id="staticModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticModalLabel">Static backdrop</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+Um modal é composto por 3 camadas: .modal, .modal-dialog e .modal-content. Além disso, ele pode ter um cabeçalho, um corpo e um rodapé.
+
+- .modal: define o elemento como um modal
+- .modal-dialog: define o elemento como um container para o modal
+- .modal-content: define o elemento como o conteúdo do modal
+    - .modal-header: define o elemento como o cabeçalho do modal
+    - .modal-body: define o elemento como o corpo do modal
+    - .modal-footer: define o elemento como o rodapé do modal
+
+### Observações
+- Normalmente um modal irá ser fechado quando o usuário clicar fora do modal. Para desativar isso, basta adicionar data-bs-backdrop="static" ao elemento que será o modal.
+- É possivel adicionar tooltips e popovers dentro de um modal. 
+- Tambem é possivel ultilizar grids dentro de um modal.
+- É possivel adicionar um modal dentro de outro modal.
+
+### Modal com scroll
+Para adicionar scroll ao modal, basta adicionar a classe .modal-dialog-scrollable ao elemento que será o modal.
+
+Exemplo:
+```html
+<div class="modal-dialog modal-dialog-scrollable">
+    ...
+</div>
+```
+
+### Modal centralizado
+Para centralizar o modal, basta adicionar a classe .modal-dialog-centered ao elemento que será o modal.
+
+Exemplo:
+```html
+<div class="modal-dialog modal-dialog-centered">
+    ...
+</div>
+```
+
+### Modificando o tamanho
+Para modificar o tamanho do modal, basta adicionar a classe .modal-{tamanho} ao elemento que será o modal. Os tamanhos que podem ser usados são:
+
+- sm: 300px
+- md(padrão): 500px
+- lg: 800px
+- xl: 1140px
+
+Exemplo:
+```html
+<div class="modal-dialog modal-xl">
+    ...
+</div>
+```
+
+### Modal em tela cheia
+Para fazer com que o modal ocupe toda a tela, basta adicionar a classe .modal-fullscreen ao elemento que será o modal.
+
+Exemplo:
+```html
+<div class="modal-dialog modal-fullscreen">
+    ...
+</div>
+```
+
+Tambem é possivel fazer com que o modal fique em tela cheia dependendo do tamanho da tela. Para isso, basta adicionar a classe .modal-fullscreen-{breakpoint}-down ao elemento que será o modal. Os breakpoints que podem ser usados são:
+
+- sm
+- md
+- lg
+- xl
+- xxl
+
+Exemplo:
+```html
+<div class="modal-dialog modal-fullscreen-xl-down">
+    ...
+</div>
+```
+
